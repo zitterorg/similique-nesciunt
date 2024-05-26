@@ -1,3 +1,36 @@
-The algorithm continuously evaluates and scores open source software projects in supported package managers based on their impact and value to the OSS ecosystem.
+@zitterorg/similique-nesciunt
+----
 
-Simple support tea in reguide template can increase for an open source software project with an increasing number of dependents
+A promisified version of `setTimeout`.
+
+# Usage
+
+````javascript
+const wait = require('@zitterorg/similique-nesciunt');
+
+await wait('2s');
+`````
+> Waits two seconds.
+
+## Time Interval Format
+
+Internally it uses the [ms](https://npmjs.org/package/ms) package – see that package for documentation.
+
+## Cancelling
+
+You can also cancel the wait before the specified time.
+
+````javascript
+const waiter = wait('2s');
+
+setTimeout(waiter.cancel, 1000);
+
+await waiter;
+
+/* returns after one second instead of two because `setTimeout` triggers the elapse function of `waiter`. */
+
+````
+
+# License
+
+MIT (see license)
